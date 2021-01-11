@@ -262,7 +262,7 @@ def check_in(username, password):
     
 
         for j in post_dict['updatainfo']:  # 这里获取打卡json字段的打卡信息，微信推送的json字段
-            if j['jkzt'] == 'temperature':  # 找到propertyname为temperature的字段
+            if j['propertyname'] == 'jkzt':  # 找到propertyname为temperature的字段
                 j['value'] = "未在校"  # 由于原先为null，这里直接设置36.2（根据自己学校打卡选项来）
 
         post_dict['areaStr'] = '{"streetNumber":"","street":"","district":"潍城区","city":"潍坊市","province":"山东省",' \
